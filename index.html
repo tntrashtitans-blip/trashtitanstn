@@ -29,7 +29,8 @@
   .hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);border:none;cursor:pointer;padding:0;transition:background 0.3s,transform 0.3s;}
   .hero-dot.active{background:var(--green-bright);transform:scale(1.35);}
   @media(max-width:900px){
-    .hero-carousel{display:none;}
+    .hero-carousel{display:block !important;width:100% !important;right:0 !important;left:0 !important;mask-image:none !important;-webkit-mask-image:none !important;}
+    .hero-carousel img{opacity:0.18 !important;object-position:center top !important;}
     .hero-dots{display:none;}
   }
 
