@@ -135,6 +135,7 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
 <nav>
   <div class="nav-logo"><a href="https://tntrashtitans.com"><img src="https://tntrashtitans.com/481710451_122106200402786504_7873103321535161403_n.jpg" alt="Trash Titans Junk Removal"></a></div>
   <ul id="navMenu">
+    <li><a href="https://tntrashtitans.com">🏠 Home</a></li>
     <li><a href="https://tntrashtitans.com/#services">Services</a></li>
     <li><a href="https://tntrashtitans.com/#portfolio">Our Work</a></li>
     <li><a href="https://tntrashtitans.com/#reviews">Reviews</a></li>
@@ -252,7 +253,7 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
         </div>
         <div class="contact-detail">
           <div class="contact-icon">📧</div>
-          <div class="contact-text"><strong>Email</strong><a href="mailto:TNTrashTitans@gmail.com">TNTrashTitans@gmail.com</a></div>
+          <div class="contact-text"><strong>Email</strong><a href="/cdn-cgi/l/email-protection#297d677d5b485a417d405d48475a694e44484045074a4644"><span class="__cf_email__" data-cfemail="4c1802183e2d3f241825382d223f0c2b212d2520622f2321">[email&#160;protected]</span></a></div>
         </div>
         <div class="contact-detail">
           <div class="contact-icon">📍</div>
@@ -303,6 +304,28 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
   </div>
 </section>
 
+<!-- BLOG SECTION -->
+<section style="background:var(--light-gray);padding:5rem 2rem;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-label">From The Trash Titans Blog</div>
+    <h2 class="section-title">Stories &amp; Tips</h2>
+    <p class="section-sub">Real stories from the road and local insights from Middle Tennessee's hardest-working junk removal crew.</p>
+    <div style="margin-top:2.5rem;max-width:480px;">
+      <a href="https://tntrashtitans.com/teen-entrepreneur.html" style="text-decoration:none;display:block;">
+        <div style="background:var(--white);border-radius:10px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+          <img src="https://tntrashtitans.com/Screenshot_2026-03-27_at_8_00_13_PM.png" alt="Lawson Gregory Teen Entrepreneur Murfreesboro TN" style="width:100%;height:220px;object-fit:cover;object-position:center 15%;display:block;">
+          <div style="padding:1.5rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:0.5rem;">The Trash Titans Story</div>
+            <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.03em;margin-bottom:0.75rem;color:var(--black);line-height:1.1;">How a 16-Year-Old Built a Real Business in Middle Tennessee</h3>
+            <p style="font-size:0.9rem;color:#555;line-height:1.65;margin-bottom:1rem;">Lawson Gregory started Trash Titans at 16 with a truck, a small trailer, and a work ethic most adults would envy. This is his story.</p>
+            <span style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--green);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;">Read the Story →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-logo">TRASH<span>TITANS</span> JUNK REMOVAL</div>
   <div class="footer-tagline">Middle Tennessee's Hardest-Working Junk Removal Service</div>
@@ -316,7 +339,7 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
     <a href="tel:6159879876">615-987-9876</a>
   </div>
   <div class="footer-areas">Proudly serving: Murfreesboro · Nashville · Smyrna · LaVergne · Nolensville · Franklin · Lebanon · Mt. Juliet · and surrounding Middle Tennessee areas</div>
-  <div class="footer-bottom">&copy; 2025 Trash Titans Junk Removal · Murfreesboro, TN · TNTrashTitans@gmail.com</div>
+  <div class="footer-bottom">&copy; 2025 Trash Titans Junk Removal · Murfreesboro, TN · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e6b2a8b29487958eb28f92878895a6818b878f8ac885898b">[email&#160;protected]</a></div>
 </footer>
 
 <div class="sticky-cta">
@@ -324,7 +347,7 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
   <a href="#quote" class="sticky-quote">📋 Free Quote</a>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMenu() { document.getElementById('navMenu').classList.toggle('open'); }
 document.querySelectorAll('#navMenu a').forEach(a => a.addEventListener('click', () => document.getElementById('navMenu').classList.remove('open')));
 function sendQuote(city) {
@@ -336,11 +359,4 @@ function sendQuote(city) {
   var dt=document.getElementById('dt').value.trim();
   if(!fn||!ln||!ph||!sv){alert('Please fill in all required fields.');return;}
   var subject='New Quote Request - Trash Titans ('+city+')';
-  var body='Name: '+fn+' '+ln+'%0D%0APhone: '+ph+'%0D%0AEmail: '+em+'%0D%0ACity: '+city+'%0D%0AService: '+sv+'%0D%0ADetails: '+dt;
-  window.location.href='mailto:TNTrashTitans@gmail.com?subject='+encodeURIComponent(subject)+'&body='+body;
-  document.getElementById('quoteForm').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
-}
-</script>
-</body>
-</html>
+  var body='Na
