@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How a 16-Year-Old Built a Real Business in Middle Tennessee | Trash Titans</title>
+<meta name="description" content="Lawson Gregory is a junior at Oakland High School in Murfreesboro, Tennessee. He's also the owner of Trash Titans Junk Removal — a fully insured, growing business he built from scratch at 16.">
+<meta name="keywords" content="teen entrepreneur Murfreesboro TN, high school business owner Tennessee, Trash Titans Lawson Gregory, young entrepreneur Middle Tennessee, junk removal business teenager">
+<link rel="canonical" href="https://tntrashtitans.com/teen-entrepreneur">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="How a 16-Year-Old Built a Real Business in Middle Tennessee">
+<meta property="og:description" content="Lawson Gregory started Trash Titans at 16 with a truck, a small trailer, and a work ethic most adults would envy. This is his story.">
+<meta property="og:url" content="https://tntrashtitans.com/teen-entrepreneur">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:#0d0d0d; --green:#2a6e2a; --green-bright:#3a9e3a;
+  --green-light:#eaf5ea; --white:#f7f7f3; --light-gray:#f0f0eb;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Barlow',sans-serif; background:var(--white); color:var(--black); overflow-x:hidden; }
+h1,h2,h3,h4 { font-family:'Bebas Neue',sans-serif; letter-spacing:0.03em; }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:200; background:var(--black); display:flex; align-items:center; justify-content:space-between; padding:0 2rem; height:66px; border-bottom:3px solid var(--green); }
+.nav-logo img { height:46px; display:block; }
+nav ul { list-style:none; display:flex; gap:1.8rem; align-items:center; }
+nav ul a { color:var(--white); text-decoration:none; font-weight:700; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; }
+nav ul a:hover { color:var(--green-bright); }
+.nav-cta { background:var(--green) !important; padding:0.5rem 1.2rem; border-radius:4px; }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.hamburger span { width:26px; height:2px; background:var(--white); display:block; }
+
+/* HERO */
+.article-hero { background:var(--black); padding:calc(66px + 4rem) 2rem 4rem; position:relative; overflow:hidden; }
+.article-hero-pattern { position:absolute; inset:0; opacity:0.035; background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%); background-size:28px 28px; }
+.article-hero-glow { position:absolute; left:-150px; top:50%; transform:translateY(-50%); width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(42,110,42,0.18) 0%,transparent 70%); pointer-events:none; }
+.article-hero-content { position:relative; z-index:2; max-width:800px; margin:0 auto; }
+.article-category { display:inline-flex; align-items:center; gap:0.4rem; background:rgba(42,110,42,0.2); border:1px solid rgba(58,158,58,0.35); color:var(--green-bright); font-size:0.7rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; padding:0.4rem 1rem; border-radius:30px; margin-bottom:1.5rem; }
+.article-hero h1 { font-size:clamp(2.5rem,6vw,5rem); color:var(--white); line-height:1; margin-bottom:1.5rem; }
+.article-hero h1 .green { color:var(--green-bright); }
+.article-meta { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+.article-meta span { font-size:0.82rem; color:rgba(247,247,243,0.5); font-weight:600; letter-spacing:0.05em; text-transform:uppercase; }
+.article-meta .dot { color:rgba(247,247,243,0.2); }
+
+/* HERO IMAGE */
+.article-hero-img { max-width:800px; margin:3rem auto 0; border-radius:12px; overflow:hidden; }
+.article-hero-img img { width:100%; display:block; object-fit:cover; max-height:480px; }
+
+/* BREADCRUMB */
+.breadcrumb { background:var(--black); padding:0.75rem 2rem; border-bottom:1px solid rgba(255,255,255,0.07); }
+.breadcrumb a { color:var(--green-bright); text-decoration:none; font-size:0.78rem; font-weight:700; }
+.breadcrumb span { color:rgba(255,255,255,0.4); font-size:0.78rem; margin:0 0.5rem; }
+.breadcrumb .current { color:rgba(255,255,255,0.6); font-size:0.78rem; }
+
+/* ARTICLE BODY */
+.article-body { max-width:760px; margin:0 auto; padding:4rem 2rem; }
+.article-body p { font-size:1.1rem; color:#333; line-height:1.9; margin-bottom:1.6rem; }
+.article-body h2 { font-size:2.2rem; margin:3rem 0 1rem; color:var(--black); }
+.article-body h3 { font-size:1.6rem; margin:2.5rem 0 0.8rem; color:var(--black); }
+.article-body strong { color:var(--black); }
+.article-body em { color:#555; }
+
+.pull-quote { border-left:5px solid var(--green); padding:1.5rem 2rem; margin:3rem 0; background:var(--green-light); border-radius:0 10px 10px 0; }
+.pull-quote p { font-size:1.3rem; color:var(--green); font-style:italic; line-height:1.6; margin:0; font-weight:600; }
+.pull-quote cite { display:block; margin-top:0.75rem; font-size:0.85rem; color:#555; font-style:normal; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; }
+
+.article-img { margin:3rem 0; border-radius:10px; overflow:hidden; }
+.article-img img { width:100%; display:block; object-fit:cover; max-height:420px; border-radius:10px; }
+.article-img figcaption { font-size:0.82rem; color:#888; margin-top:0.5rem; text-align:center; font-style:italic; }
+
+.key-fact { background:var(--black); border-radius:10px; padding:2rem; margin:3rem 0; display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; text-align:center; }
+.key-fact .fact-num { font-family:'Bebas Neue',sans-serif; font-size:2.8rem; color:var(--green-bright); line-height:1; }
+.key-fact .fact-label { font-size:0.75rem; color:rgba(247,247,243,0.5); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.3rem; }
+
+.day-in-life { background:var(--light-gray); border-radius:10px; padding:2rem; margin:3rem 0; }
+.day-in-life h3 { font-size:1.5rem; margin-bottom:1.5rem; }
+.timeline-item { display:flex; gap:1.5rem; margin-bottom:1.2rem; align-items:flex-start; }
+.timeline-time { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:var(--green); min-width:70px; letter-spacing:0.05em; }
+.timeline-desc { font-size:0.95rem; color:#444; line-height:1.6; padding-top:2px; }
+
+/* CTA BOX */
+.article-cta { background:var(--green); border-radius:12px; padding:2.5rem; margin:4rem 0; text-align:center; }
+.article-cta h3 { font-size:2.2rem; color:var(--white); margin-bottom:0.75rem; }
+.article-cta p { color:rgba(255,255,255,0.82); font-size:1rem; line-height:1.6; margin-bottom:1.5rem; max-width:500px; margin-left:auto; margin-right:auto; }
+.article-cta a { display:inline-flex; align-items:center; gap:0.5rem; background:var(--white); color:var(--green); padding:0.9rem 2rem; border-radius:5px; font-family:'Barlow',sans-serif; font-weight:700; font-size:0.95rem; text-transform:uppercase; letter-spacing:0.06em; text-decoration:none; transition:all 0.2s; margin:0.4rem; }
+.article-cta a:hover { background:var(--black); color:var(--white); transform:translateY(-2px); }
+.article-cta a.ghost { background:transparent; color:var(--white); border:2px solid rgba(255,255,255,0.4); }
+.article-cta a.ghost:hover { background:var(--white); color:var(--green); }
+
+/* FOOTER */
+footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
+.footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--white); letter-spacing:0.1em; margin-bottom:0.4rem; }
+.footer-logo span { color:var(--green-bright); }
+.footer-tagline { font-size:0.8rem; color:rgba(255,255,255,0.32); margin-bottom:1.2rem; }
+.footer-links { display:flex; justify-content:center; gap:2rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+.footer-links a { color:rgba(255,255,255,0.42); text-decoration:none; font-size:0.78rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; transition:color 0.2s; }
+.footer-links a:hover { color:var(--green-bright); }
+.footer-areas { font-size:0.76rem; color:rgba(255,255,255,0.22); margin-bottom:1.5rem; line-height:1.8; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.07); padding-top:1.5rem; font-size:0.7rem; color:rgba(255,255,255,0.18); }
+
+.sticky-cta { display:none; position:fixed; bottom:0; left:0; right:0; z-index:150; background:var(--black); border-top:2px solid var(--green); padding:0.7rem 1rem; gap:0.7rem; }
+.sticky-cta a { flex:1; text-align:center; padding:0.75rem; border-radius:5px; font-family:'Barlow',sans-serif; font-weight:700; font-size:0.88rem; text-transform:uppercase; letter-spacing:0.05em; text-decoration:none; }
+.sticky-call { background:var(--green); color:var(--white); }
+.sticky-quote { background:transparent; color:var(--white); border:2px solid rgba(255,255,255,0.22); }
+
+@media(max-width:768px) {
+  nav ul { display:none; }
+  .hamburger { display:flex; }
+  nav ul.open { display:flex; flex-direction:column; position:fixed; top:66px; left:0; right:0; background:var(--black); padding:2rem; gap:1.5rem; border-bottom:3px solid var(--green); z-index:199; }
+  .article-body { padding:3rem 1.5rem; }
+  .key-fact { grid-template-columns:1fr; gap:1rem; }
+  .sticky-cta { display:flex; }
+  body { padding-bottom:68px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><a href="https://tntrashtitans.com"><img src="https://tntrashtitans.com/481710451_122106200402786504_7873103321535161403_n.jpg" alt="Trash Titans Junk Removal"></a></div>
+  <ul id="navMenu">
+    <li><a href="https://tntrashtitans.com/#services">Services</a></li>
+    <li><a href="https://tntrashtitans.com/#portfolio">Our Work</a></li>
+    <li><a href="https://tntrashtitans.com/#reviews">Reviews</a></li>
+    <li><a href="https://tntrashtitans.com/#about">Our Story</a></li>
+    <li><a href="https://tntrashtitans.com/#areas">Service Areas</a></li>
+    <li><a href="https://tntrashtitans.com/#contact" class="nav-cta">Free Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb" style="margin-top:66px;">
+  <a href="https://tntrashtitans.com">Home</a><span>›</span>
+  <a href="https://tntrashtitans.com">Blog</a><span>›</span>
+  <span class="current">How a 16-Year-Old Built a Real Business</span>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <div class="article-hero-pattern"></div>
+  <div class="article-hero-glow"></div>
+  <div class="article-hero-content">
+    <div class="article-category">📖 The Trash Titans Story</div>
+    <h1>HOW A <span class="green">16-YEAR-OLD</span><br>BUILT A REAL BUSINESS<br>IN MIDDLE TENNESSEE</h1>
+    <div class="article-meta">
+      <span>By Trash Titans</span>
+      <span class="dot">·</span>
+      <span>Murfreesboro, TN</span>
+      <span class="dot">·</span>
+      <span>March 2025 — Present</span>
+    </div>
+  </div>
+  <div class="article-hero-img">
+    <img src="https://tntrashtitans.com/Screenshot_2026-03-27_at_8_00_13_PM.png" alt="Lawson Gregory - Owner of Trash Titans Junk Removal, Murfreesboro Tennessee">
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+  <p>Most 16-year-olds are thinking about their driver's license, Friday night games, and what they're doing this weekend. <strong>Lawson Gregory</strong> is thinking about dump trailer payments, fuel costs, monthly disposal fees, and how to fit another job in between school and lacrosse practice.</p>
+
+  <p>Lawson is a junior at Oakland High School in Murfreesboro, Tennessee. He's also the founder and owner of <strong>Trash Titans Junk Removal</strong> — a fully insured, growing junk removal business serving eight cities across Middle Tennessee. He didn't inherit it. He didn't get a loan from a bank. He built it himself, one haul at a time, starting at sixteen years old.</p>
+
+  <p>This is his story.</p>
+
+  <div class="key-fact">
+    <div><div class="fact-num">16</div><div class="fact-label">Age When He Started</div></div>
+    <div><div class="fact-num">100+</div><div class="fact-label">Jobs Completed</div></div>
+    <div><div class="fact-num">8</div><div class="fact-label">Cities Served</div></div>
+  </div>
+
+  <h2>It Started With Donuts</h2>
+
+  <p>Before there was Trash Titans, there was Donut Country. Lawson started working there at 15 — his first real job, his first paycheck, his first taste of what it felt like to earn something. His parents are entrepreneurs themselves, and that influence took root long before he ever picked up a shovel or loaded a trailer.</p>
+
+  <p>Watching his parents build something of their own lit a fire in Lawson. He didn't just want a job. He wanted something of his own. Something he could build. Something where the ceiling was set by his own effort and not someone else's schedule.</p>
+
+  <p>So while he was still working at Donut Country, he started thinking. What could a kid with a truck, a small trailer, and a willingness to do the work that other people don't want to do actually build?</p>
+
+  <div class="pull-quote">
+    <p>"He didn't just want a job. He wanted something of his own — something where the ceiling was set by his own effort."</p>
+  </div>
+
+  <h2>The Beginning — March 2025</h2>
+
+  <p>In March of 2025, Lawson launched Trash Titans with a friend, a pickup truck, a small trailer, and a simple idea: people have junk, and they'll pay someone reliable to haul it away. They started posting on Facebook, Instagram, and local community pages. The phone started ringing.</p>
+
+  <p>The early days were straightforward — show up, load up, haul away. But the reality of the work set in quickly. Every single load had to be hand-unloaded at the dump. It was physical, time-consuming, and the operating costs were eating into what felt like good money on paper.</p>
+
+  <p>Lawson kept his head down and kept working. Job by job, he built a reputation. Word spread the way it always does in Middle Tennessee — neighbor to neighbor, parent to parent, Facebook group to Facebook group. Trash Titans was reliable, affordable, and the kid who showed up actually worked.</p>
+
+  <figure class="article-img">
+    <img src="https://tntrashtitans.com/541779831_10102790668046002_5119342245352962585_n.jpg" alt="Trash Titans dump trailer - Lawson Gregory's investment in his business">
+    <figcaption>The dump trailer that changed everything — Lawson's biggest business investment to date.</figcaption>
+  </figure>
+
+  <h2>The Pivot — Betting on Himself</h2>
+
+  <p>A few months in, something shifted. Jobs were stacking up. The small trailer was limiting how much he could haul in a single run. Hand-unloading at the dump was costing him time and money he didn't have. And Lawson had a stretch of weeks where the bookings were coming in faster than he could handle them efficiently.</p>
+
+  <p>He sat down with his mom and dad and told them what he was thinking: he wanted to invest in a dump trailer. A real one. The kind that lifts and empties itself. The kind that says this isn't a side hustle — it's a business.</p>
+
+  <p>His parents listened. They talked through the numbers. And then they backed his vision. The dump trailer changed everything. Jobs that used to take twice as long could now be completed efficiently. Lawson could take on bigger loads, more jobs, and compete with established haulers who had been in the business for years.</p>
+
+  <div class="pull-quote">
+    <p>"The dump trailer changed everything. Lawson could take on bigger loads, more jobs, and compete with haulers who had been in the business for years."</p>
+  </div>
+
+  <h2>Learning the Hard Lessons</h2>
+
+  <p>With growth came reality. Lawson's parents — both entrepreneurs — began sitting down with him to talk about the side of business that nobody posts about on social media: the expenses that don't go away.</p>
+
+  <p>Monthly dump fees. Trailer payments. Fuel costs. Insurance premiums. These aren't one-time hits — they're recurring, reliable, and unforgiving. The hardest lesson for any young business owner is learning that not every dollar you make is a dollar you can spend. Money has to be set aside for expenses, for taxes, for the month when jobs slow down.</p>
+
+  <p>It's a lesson most people don't learn until they're in their thirties. Lawson is learning it at sixteen — and that gap in financial understanding is one of the biggest advantages he'll carry for the rest of his life.</p>
+
+  <h2>A Day in the Life</h2>
+
+  <p>If you think running a business while going to high school and playing lacrosse sounds exhausting, you're not wrong. Here's what a typical day looks like for Lawson Gregory:</p>
+
+  <div class="day-in-life">
+    <h3>⏰ Lawson's Day</h3>
+    <div class="timeline-item">
+      <div class="timeline-time">5:00 AM</div>
+      <div class="timeline-desc">Wake up. Load up. Drive the previous day's haul to the dump before school opens. He's done by the time most of his classmates are still asleep.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">8:30 AM</div>
+      <div class="timeline-desc">School starts. Truck and trailer parked in the lot. His classmates know what it's for.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">3:30 PM</div>
+      <div class="timeline-desc">Bell rings. Lawson heads straight to a job — garage cleanout, curbside pickup, furniture removal — whatever's on the schedule.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">6:00 PM</div>
+      <div class="timeline-desc">Lacrosse practice. Some days he shows up still in his work clothes, having finished a job with just enough time to make it to the field.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-time">All Day & Evening</div>
+      <div class="timeline-desc">Between every block of the day — and into the evening — Lawson is answering calls, texts and quote requests. The business doesn't stop when the workday does.</div>
+    </div>
+  </div>
+
+  <p>His lacrosse teammates know he runs Trash Titans. His coaches know. His teachers probably suspect something is going on when a kid pulls into the school parking lot with a dump trailer hitched to a lifted Super Duty. Lawson doesn't hide it — he owns it.</p>
+
+  <h2>Building a Team</h2>
+
+  <p>As the jobs got bigger, Lawson started bringing in trusted friends and classmates to help. Bigger jobs require more hands, and Lawson recognized early that you can't scale a business alone. He pays his crew fairly and brings them along on jobs that need the extra muscle.</p>
+
+  <p>There's something meaningful in that too — a sixteen-year-old who employs his peers, who creates work for young men in his community at an age when most of the jobs available to them are limited to fast food and retail. Lawson is offering something different: real work, physical work, work that pays based on what you do.</p>
+
+  <h2>What's Next for Trash Titans</h2>
+
+  <p>Lawson has one more year of high school. After that he's looking at lineman school — the kind of skilled trade career that pays well and builds something tangible. But Trash Titans isn't going anywhere.</p>
+
+  <p>The business Lawson has built — the brand, the reputation, the systems, the customer base — is bigger than any one person. The way he's learning marketing, managing his crew, and handling the fundamentals of running a profitable operation, there are real options for keeping Trash Titans growing and employing young men in the area long after he moves on to the next chapter.</p>
+
+  <p>Right now though, Lawson is enjoying what very few people his age get to experience: the freedom that comes with being self-employed. The ability to set your own schedule, reap the rewards of your own effort, and build something with your name on it. Most people spend their entire careers chasing that feeling. Lawson found it at sixteen.</p>
+
+  <div class="pull-quote">
+    <p>"Most people spend their entire careers chasing the freedom of being self-employed. Lawson found it at sixteen."</p>
+  </div>
+
+  <h2>The Bigger Lesson</h2>
+
+  <p>Lawson Gregory's story isn't just about junk removal. It's about what happens when a young person is raised to believe that work has value, that hustle produces results, and that you don't have to wait for someone to hand you an opportunity.</p>
+
+  <p>He started with a truck, a small trailer, and a willingness to do the dirty work. He invested back into the business when others might have spent the money. He learned from his mistakes and from the people around him who knew more than he did. And he kept showing up — at 5am when the dump opens, at 3pm when the bell rings, and at every job in between.</p>
+
+  <p>Middle Tennessee has always been a place where hard work gets rewarded. Lawson Gregory is proving that you don't have to wait until you're an adult to start collecting on that promise.</p>
+
+  <p><em>Trash Titans Junk Removal serves Murfreesboro, Nashville, Smyrna, LaVergne, Nolensville, Franklin, Lebanon and Mt. Juliet, Tennessee. Fully insured. Residential and commercial.</em></p>
+
+  <!-- CTA BOX -->
+  <div class="article-cta">
+    <h3>Need Junk Hauled in Middle Tennessee?</h3>
+    <p>Lawson built Trash Titans on hard work and honest service. Call or text for a free quote — he responds fast.</p>
+    <a href="tel:6159879876">📞 615-987-9876</a>
+    <a href="https://tntrashtitans.com/#contact" class="ghost">📋 Get a Free Quote</a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">TRASH<span>TITANS</span> JUNK REMOVAL</div>
+  <div class="footer-tagline">Middle Tennessee's Hardest-Working Junk Removal Service</div>
+  <div class="footer-links">
+    <a href="https://tntrashtitans.com">Home</a>
+    <a href="https://tntrashtitans.com/#services">Services</a>
+    <a href="https://tntrashtitans.com/#portfolio">Our Work</a>
+    <a href="https://tntrashtitans.com/#about">Our Story</a>
+    <a href="https://tntrashtitans.com/#areas">Service Areas</a>
+    <a href="https://tntrashtitans.com/#contact">Get a Quote</a>
+    <a href="tel:6159879876">615-987-9876</a>
+  </div>
+  <div class="footer-areas">Proudly serving: Murfreesboro · Nashville · Smyrna · LaVergne · Nolensville · Franklin · Lebanon · Mt. Juliet · and surrounding Middle Tennessee areas</div>
+  <div class="footer-bottom">&copy; 2025 Trash Titans Junk Removal · Murfreesboro, TN · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9edf7edcbd8cad1edd0cdd8d7caf9ded4d8d0d597dad6d4">[email&#160;protected]</a></div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="tel:6159879876" class="sticky-call">📞 Call Now</a>
+  <a href="https://tntrashtitans.com/#contact" class="sticky-quote">📋 Free Quote</a>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleMenu() { docum
