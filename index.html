@@ -26,14 +26,34 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "HomeAndConstructionBusiness",
   "name": "Trash Titans Junk Removal",
   "image": "https://tntrashtitans.com/481710451_122106200402786504_7873103321535161403_n.jpg",
   "url": "https://tntrashtitans.com",
   "telephone": "+16159879876",
   "email": "TNTrashTitans@gmail.com",
-  "description": "Trash Titans is a locally owned junk removal service serving Murfreesboro, Nashville, Smyrna, LaVergne, Nolensville and Franklin Tennessee. Fully insured. Residential and commercial.",
+  "description": "Trash Titans is a locally owned junk removal service serving Murfreesboro, Nashville, Smyrna, LaVergne, Nolensville, Franklin, Lebanon and Mt. Juliet Tennessee. Fully insured. Residential and commercial.",
   "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Murfreesboro",
+    "addressRegion": "TN",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.8456,
+    "longitude": -86.3903
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.8456,
+      "longitude": -86.3903
+    },
+    "geoRadius": "48280"
+  },
   "areaServed": [
     {"@type": "City", "name": "Murfreesboro", "containedIn": {"@type": "State", "name": "Tennessee"}},
     {"@type": "City", "name": "Nashville", "containedIn": {"@type": "State", "name": "Tennessee"}},
@@ -44,10 +64,76 @@
     {"@type": "City", "name": "Lebanon", "containedIn": {"@type": "State", "name": "Tennessee"}},
     {"@type": "City", "name": "Mount Juliet", "containedIn": {"@type": "State", "name": "Tennessee"}}
   ],
-  "serviceType": ["Junk Removal", "Garage Cleanout", "Furniture Removal", "Appliance Removal", "Storm Damage Cleanup", "Commercial Cleanout", "Estate Cleanout", "Renovation Debris Removal"],
-  "openingHours": "Mo-Su 00:00-23:59",
-  "sameAs": [
-    "https://www.facebook.com/TrashTitans"
+  "hasOfferCatalog": {"@type": "OfferCatalog","name": "Junk Removal Services","itemListElement": [{"@type": "Offer","itemOffered": {"@type": "Service","name": "Garage Cleanouts"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Furniture and Appliance Removal"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Renovation and Construction Debris Removal"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Storm Damage Cleanup"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Commercial Cleanouts"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Estate Cleanouts"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Curbside Pickup"}},{"@type": "Offer","itemOffered": {"@type": "Service","name": "Yard Debris Removal"}}]},
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "6"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Eric Talbot"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Had another great experience with Trash Titans. Great communication, reasonable pricing, and being nice to and letting the clients kids help is a sure fire way to seal the deal on snagging a customer for life."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Zach Martin"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Lawson is a beast! He has made a tremendous difference in my life today! I would recommend him to anyone!"
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Jacquelyn Cole"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Can't ask for a more courteous and prompt business to haul away your stuff!"
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Lizabeth Stluka"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "If you need junk hauled off, contact Trash Titans. Lawson is courteous, efficient, and affordable. I'm starting 2026 with a clean slate."
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Troy Wheaton"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "Glad to have you around to get rid of my junk!"
+    },
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Amanda Groom Johnson"},
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "reviewBody": "I highly recommend Trash Titans!"
+    }
+  ],
+  "sameAs": ["https://www.facebook.com/TrashTitans"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How much does junk removal cost in Murfreesboro TN?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing depends on the volume and type of items being removed. Trash Titans offers free, upfront quotes with no hidden fees. Fill out our quote form or text 615-987-9876 for an honest price before we start."}},
+    {"@type": "Question", "name": "What items does Trash Titans remove?", "acceptedAnswer": {"@type": "Answer", "text": "We haul almost anything — old furniture, appliances, garage junk, renovation debris, yard waste, storm damage, office equipment, and more. No job is too big, too small, or too unusual."}},
+    {"@type": "Question", "name": "How quickly can you pick up my junk in Murfreesboro?", "acceptedAnswer": {"@type": "Answer", "text": "We offer same-week service in most cases across Murfreesboro, Smyrna, LaVergne, Nashville, Nolensville, Franklin, Lebanon and Mt. Juliet."}},
+    {"@type": "Question", "name": "Is Trash Titans insured?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — Trash Titans is fully insured for both residential and commercial junk removal jobs across Middle Tennessee."}},
+    {"@type": "Question", "name": "Do you offer curbside pickup in Murfreesboro?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Just place your items at the curb and we will load and haul everything away. You don't even need to be home."}},
+    {"@type": "Question", "name": "What areas do you serve besides Murfreesboro?", "acceptedAnswer": {"@type": "Answer", "text": "Trash Titans serves Murfreesboro, Nashville, Smyrna, LaVergne, Nolensville, Franklin, Lebanon and Mt. Juliet Tennessee."}},
+    {"@type": "Question", "name": "Can you do same day junk removal?", "acceptedAnswer": {"@type": "Answer", "text": "We love same day jobs and will always try to make it happen. Text us at 615-987-9876 and we will let you know what we can do."}},
+    {"@type": "Question", "name": "Do you haul away old appliances in Murfreesboro?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — refrigerators, washers, dryers, dishwashers, stoves — we haul them all from anywhere in your home across Murfreesboro and Middle Tennessee."}}
   ]
 }
 </script>
@@ -325,49 +411,49 @@
     <div class="portfolio-grid">
       <div class="portfolio-card fade-in">
         <div class="ba-wrap">
-          <div class="ba-side"><img src="489488281_122124844766786504_8122162826979059588_n.jpg" alt="Cluttered garage before cleanout"><span class="ba-label">BEFORE</span></div>
+          <div class="ba-side"><img src="489488281_122124844766786504_8122162826979059588_n.jpg" alt="Cluttered garage before junk removal cleanout Murfreesboro TN"><span class="ba-label">BEFORE</span></div>
           <div class="ba-divider"></div>
-          <div class="ba-side"><img src="489251787_122124844754786504_3546944605580492886_n.jpg" alt="Clean open garage after cleanout"><span class="ba-label after">AFTER</span></div>
+          <div class="ba-side"><img src="489251787_122124844754786504_3546944605580492886_n.jpg" alt="Clean empty garage after junk removal by Trash Titans Murfreesboro TN"><span class="ba-label after">AFTER</span></div>
         </div>
         <div class="portfolio-info"><h4>Full Garage Cleanout</h4><p>Murfreesboro, TN — Bikes, furniture &amp; years of buildup hauled away</p></div>
       </div>
       <div class="portfolio-card fade-in">
         <div class="ba-wrap">
-          <div class="ba-side"><img src="508934933_122142039260786504_2298116591808668454_n.jpg" alt="Commercial office furniture before removal"><span class="ba-label">BEFORE</span></div>
+          <div class="ba-side"><img src="508934933_122142039260786504_2298116591808668454_n.jpg" alt="Commercial office furniture and equipment before removal Franklin TN"><span class="ba-label">BEFORE</span></div>
           <div class="ba-divider"></div>
-          <div class="ba-side"><img src="508776504_122142039272786504_6637564252147793748_n.jpg" alt="Commercial area cleared after removal"><span class="ba-label after">AFTER</span></div>
+          <div class="ba-side"><img src="508776504_122142039272786504_6637564252147793748_n.jpg" alt="Commercial space cleared after junk removal Franklin TN by Trash Titans"><span class="ba-label after">AFTER</span></div>
         </div>
         <div class="portfolio-info"><h4>Commercial Office Cleanout</h4><p>Franklin, TN — Office chairs, refrigerators &amp; equipment removed</p></div>
       </div>
       <div class="portfolio-card fade-in">
         <div class="ba-wrap">
-          <div class="ba-side"><img src="613146617_122170032536786504_2762974642797895638_n.jpg" alt="Cluttered garage before cleanout"><span class="ba-label">BEFORE</span></div>
+          <div class="ba-side"><img src="613146617_122170032536786504_2762974642797895638_n.jpg" alt="Cluttered garage before cleanout Blackman TN"><span class="ba-label">BEFORE</span></div>
           <div class="ba-divider"></div>
-          <div class="ba-side"><img src="612888132_122170032554786504_633945516669432055_n.jpg" alt="Empty clean garage after cleanout"><span class="ba-label after">AFTER</span></div>
+          <div class="ba-side"><img src="612888132_122170032554786504_633945516669432055_n.jpg" alt="Empty garage after junk removal cleanout Blackman TN by Trash Titans"><span class="ba-label after">AFTER</span></div>
         </div>
         <div class="portfolio-info"><h4>Garage Cleanout</h4><p>Blackman, TN — Completely cleared for a new build-out</p></div>
       </div>
       <div class="portfolio-card fade-in">
         <div class="ba-wrap">
-          <div class="ba-side"><img src="615821688_122170707728786504_2656910311365650086_n.jpg" alt="Nashville rooftop bar before removal"><span class="ba-label">BEFORE</span></div>
+          <div class="ba-side"><img src="615821688_122170707728786504_2656910311365650086_n.jpg" alt="Nashville rooftop bar before junk removal by Trash Titans Nashville TN"><span class="ba-label">BEFORE</span></div>
           <div class="ba-divider"></div>
-          <div class="ba-side"><img src="616549734_122170707740786504_6230272419949637274_n.jpg" alt="Nashville rooftop cleared after removal"><span class="ba-label after">AFTER</span></div>
+          <div class="ba-side"><img src="616549734_122170707740786504_6230272419949637274_n.jpg" alt="Nashville rooftop cleared after bar removal by Trash Titans Nashville TN"><span class="ba-label after">AFTER</span></div>
         </div>
         <div class="portfolio-info"><h4>Nashville Rooftop Bar Removal</h4><p>Nashville, TN — Full bar section hauled off rooftop</p></div>
       </div>
       <div class="portfolio-card fade-in">
         <div class="ba-wrap">
-          <div class="ba-side"><img src="631480806_122173267382786504_7684370409430681580_n.jpg" alt="Driveway full of boxes and junk before pickup"><span class="ba-label">BEFORE</span></div>
+          <div class="ba-side"><img src="631480806_122173267382786504_7684370409430681580_n.jpg" alt="Driveway full of junk and boxes before curbside pickup Riverdale TN"><span class="ba-label">BEFORE</span></div>
           <div class="ba-divider"></div>
-          <div class="ba-side"><img src="630638743_122173267370786504_1130838635178663678_n.jpg" alt="Clean driveway after curbside pickup"><span class="ba-label after">AFTER</span></div>
+          <div class="ba-side"><img src="630638743_122173267370786504_1130838635178663678_n.jpg" alt="Clean driveway after curbside junk pickup Riverdale TN by Trash Titans"><span class="ba-label after">AFTER</span></div>
         </div>
         <div class="portfolio-info"><h4>Driveway &amp; Curbside Pickup</h4><p>Riverdale, TN — Boxes, cardboard &amp; debris cleared same day</p></div>
       </div>
       <div class="portfolio-card fade-in">
         <div class="ba-wrap">
-          <div class="ba-side"><img src="623239093_122172201668786504_3279389145293651024_n.jpg" alt="Renovation debris piled up before removal"><span class="ba-label">BEFORE</span></div>
+          <div class="ba-side"><img src="623239093_122172201668786504_3279389145293651024_n.jpg" alt="Renovation debris and construction waste before removal Rockvale TN"><span class="ba-label">BEFORE</span></div>
           <div class="ba-divider"></div>
-          <div class="ba-side"><img src="622875949_122172201656786504_6271314026622483845_n.jpg" alt="Clean patio area after debris removal"><span class="ba-label after">AFTER</span></div>
+          <div class="ba-side"><img src="622875949_122172201656786504_6271314026622483845_n.jpg" alt="Clean patio after renovation debris removal Rockvale TN by Trash Titans"><span class="ba-label after">AFTER</span></div>
         </div>
         <div class="portfolio-info"><h4>Renovation Debris Removal</h4><p>Rockvale, TN — Flooring, carpet &amp; construction waste removed</p></div>
       </div>
