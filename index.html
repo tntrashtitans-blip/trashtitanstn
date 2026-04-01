@@ -229,7 +229,7 @@
   @media(max-width:768px){
     nav ul{display:none;}
     .hamburger{display:flex;}
-    nav ul.open{display:flex;flex-direction:column;position:fixed;top:78px;left:0;right:0;background:var(--black);padding:2rem;gap:1.5rem;border-bottom:3px solid var(--green);z-index:199;}
+    nav ul.open{display:flex;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:var(--black);padding:2rem;gap:1.5rem;border-bottom:3px solid var(--green);z-index:199;}
     .hero-content{padding:2.5rem 1.5rem;}
     .hero h1{font-size:3.2rem;}
     .portfolio-grid{grid-template-columns:1fr;}
@@ -240,6 +240,9 @@
     section{padding:4rem 1.5rem;}
     .sticky-cta{display:flex;}
     body{padding-bottom:68px;}
+    .hero-lockup-img{height:80px !important;}
+    .hero-lockup-text{font-size:1.8rem !important;}
+    .hero-badge{font-size:0.6rem !important;letter-spacing:0.1em !important;white-space:normal !important;}
   }
 </style>
 <meta name="google-site-verification" content="C_ZLTTmeCN7UzhjNvuqGWsE8kybgz1wOy0C5Wc-VAB0" />
@@ -273,9 +276,9 @@
   </div>
   <div class="hero-content">
     <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;">
-      <img src="481710451_122106200402786504_7873103321535161403_n.jpg" alt="Trash Titans" style="height:125px;width:auto;display:block;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));flex-shrink:0;">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--white);line-height:0.95;letter-spacing:0.05em;white-space:nowrap;">TRASH <span style="color:var(--green-bright);">TITANS</span></div>
-    </div>
+        <img src="481710451_122106200402786504_7873103321535161403_n.jpg" alt="Trash Titans" class="hero-lockup-img" style="height:125px;width:auto;display:block;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));flex-shrink:0;">
+        <div class="hero-lockup-text" style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--white);line-height:0.95;letter-spacing:0.05em;white-space:nowrap;">TRASH <span style="color:var(--green-bright);">TITANS</span></div>
+      </div>
     <div class="hero-badge">📍 Junk Removal — Murfreesboro, Nashville &amp; Middle Tennessee</div>
     <h1>
       WE HAUL<br>
