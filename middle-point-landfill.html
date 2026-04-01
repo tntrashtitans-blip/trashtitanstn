@@ -43,13 +43,7 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 40px; height: 64px;
     }
-    .nav-logo {
-      text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800; font-size: 1.2rem;
-      letter-spacing: 2px; text-transform: uppercase; color: #fff;
-    }
-    .nav-logo span { color: var(--gold); }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
     .nav-links { display: flex; gap: 28px; align-items: center; }
     .nav-links a {
       color: #888; text-decoration: none;
@@ -270,7 +264,9 @@
 <body>
 
   <nav>
-    <a class="nav-logo" href="index.html">🛡 TRASH <span>TITANS</span></a>
+    <a class="nav-logo" href="index.html">
+      <img src="481710451_122106200402786504_7873103321535161403_n.jpg" alt="Trash Titans Junk Removal" style="height:42px;display:block;">
+    </a>
     <div class="nav-links">
       <a href="index.html#services">Services</a>
       <a href="index.html#areas">Service Areas</a>
