@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "teen-entrepreneur.html",
+    "category": "The Trash Titans Story",
+    "labelColor": "var(--green)",
+    "title": "How a Teen Built a Real Business in Middle Tennessee",
+    "excerpt": "Lawson Gregory started Trash Titans with a truck, a trailer, and a work ethic most adults would envy. This is his story.",
+    "image": "/Screenshot_2026-03-27_at_8_00_13_PM.png",
+    "imageAlt": "Lawson Gregory Teen Entrepreneur Murfreesboro TN",
+    "imagePosition": "center top",
+    "cta": "Read the Story"
+  },
+  {
+    "slug": "middle-point-landfill.html",
+    "category": "Local News · April 2026",
+    "labelColor": "#8B1A1A",
+    "headerBg": "#8B1A1A",
+    "title": "Middle Point Landfill Is Under Fire. Your Junk Removal Isn't.",
+    "excerpt": "Rutherford County's controversial landfill racked up more state violations. Here's the full story.",
+    "image": null,
+    "cta": "Read the Article"
+  },
+  {
+    "slug": "junk-removal-cost-murfreesboro.html",
+    "category": "Pricing Guide",
+    "labelColor": "var(--green)",
+    "title": "How Much Does Junk Removal Cost in Murfreesboro TN?",
+    "excerpt": "Volume, weight, and location — the three real factors that determine your quote. No surprises, ever.",
+    "image": "/junk-removal-murfreesboro-construction-debris.jpg",
+    "imageAlt": "Junk removal cost Murfreesboro TN",
+    "imagePosition": "center",
+    "cta": "Read the Guide"
+  }
+]
