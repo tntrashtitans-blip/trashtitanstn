@@ -289,34 +289,57 @@ footer{background:#080808;color:rgba(255,255,255,0.45);padding:3rem 1.5rem;}
 </section>
 
 <!-- BLOG -->
-<section class="section blog-section">
-  <div class="section-inner">
-    <div class="section-label">From The Blog</div>
+<section id="blog" style="background:var(--white);">
+  <div class="container">
+    <div class="section-label">From The Trash Titans Blog</div>
     <h2 class="section-title">Stories &amp; Tips</h2>
-    
-  <!-- Blog cards driven by static list matching blogs.json -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;">
-    <a href="/teen-entrepreneur.html" style="background:#161616;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;display:block;">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--white);margin-bottom:0.5rem;">Lawson's Story: Running a Business at 17</div>
-      <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">April 2026</div>
-      <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">How a high school junior built a junk removal business from the ground up in Middle Tennessee.</div>
-    </a>
-    <a href="/middle-point-landfill.html" style="background:#161616;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;display:block;">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--white);margin-bottom:0.5rem;">Middle Point Landfill: What You Need to Know</div>
-      <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">April 2026</div>
-      <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">Everything Murfreesboro residents need to know about disposing of junk responsibly at Middle Point.</div>
-    </a>
-    <a href="/junk-removal-cost-murfreesboro.html" style="background:#161616;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;display:block;">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--white);margin-bottom:0.5rem;">How Much Does Junk Removal Cost in Murfreesboro?</div>
-      <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">April 2026</div>
-      <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">A straight-talk pricing guide covering what affects junk removal costs and what to expect from Trash Titans.</div>
-    </a>
-    <a href="/storm-debris-cleanup-middle-tennessee.html" style="background:#161616;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;display:block;">
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--white);margin-bottom:0.5rem;">Storm Debris Cleanup in Middle Tennessee</div>
-      <div style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">April 2026</div>
-      <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.6;">After a storm rolls through, fast debris removal matters. Here's how Trash Titans helps Middle Tennessee recover quickly.</div>
-    </a>
-  </div>
+    <p class="section-sub">Real stories from the road, pricing guides, and local insights from Middle Tennessee's hardest-working junk removal crew.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-top:3rem;">
+      <a href="storm-debris-cleanup-middle-tennessee.html" style="text-decoration:none;">
+        <div style="background:var(--light-gray);border-radius:10px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+          <img src="/lawson-oakland-patriots-lacrosse.webp" alt="Oakland Patriots lacrosse team huddle Murfreesboro TN" style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;" loading="lazy">
+          <div style="padding:1.5rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#1a5276;margin-bottom:0.5rem;">&#9928; Storm Season &middot; April 2026</div>
+            <h3 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--black);line-height:1.1;">Storm Season in Middle Tennessee: Why Fast Cleanup Matters</h3>
+            <p style="font-size:0.9rem;color:#555;line-height:1.65;margin-bottom:1rem;">A storm called our lacrosse game early &mdash; and on the drive home the debris was everywhere. Here's how Trash Titans can help after severe weather hits your yard.</p>
+            <span style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--green);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;">Read the Story &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a href="teen-entrepreneur.html" style="text-decoration:none;">
+        <div style="background:var(--light-gray);border-radius:10px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+          <img src="/lawson-gregory-trash-titans-owner.webp" alt="Lawson Gregory Teen Entrepreneur" style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;" loading="lazy">
+          <div style="padding:1.5rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:0.5rem;">The Trash Titans Story</div>
+            <h3 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--black);line-height:1.1;">How a Teen Built a Real Business in Middle Tennessee</h3>
+            <p style="font-size:0.9rem;color:#555;line-height:1.65;margin-bottom:1rem;">Lawson Gregory started Trash Titans with a truck, a trailer, and a work ethic most adults would envy. This is his story.</p>
+            <span style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--green);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;">Read the Story &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a href="middle-point-landfill.html" style="text-decoration:none;">
+        <div style="background:var(--light-gray);border-radius:10px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+          <div style="background:#8B1A1A;padding:0.6rem 1.2rem;"><span style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#fff;">&#9888; Local News &middot; April 2026</span></div>
+          <div style="padding:1.5rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#8B1A1A;margin-bottom:0.5rem;">Rutherford County</div>
+            <h3 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--black);line-height:1.1;">Middle Point Landfill Is Under Fire. Your Junk Removal Isn't.</h3>
+            <p style="font-size:0.9rem;color:#555;line-height:1.65;margin-bottom:1rem;">Rutherford County's controversial landfill racked up more state violations. Here's the full story.</p>
+            <span style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--green);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;">Read the Article &rarr;</span>
+          </div>
+        </div>
+      </a>
+      <a href="junk-removal-cost-murfreesboro.html" style="text-decoration:none;">
+        <div style="background:var(--light-gray);border-radius:10px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+          <img src="/junk-removal-murfreesboro-construction-debris.webp" alt="Junk removal cost Murfreesboro TN" style="width:100%;height:220px;object-fit:cover;object-position:center;display:block;" loading="lazy">
+          <div style="padding:1.5rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:0.5rem;">Pricing Guide</div>
+            <h3 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--black);line-height:1.1;">How Much Does Junk Removal Cost in Murfreesboro TN?</h3>
+            <p style="font-size:0.9rem;color:#555;line-height:1.65;margin-bottom:1rem;">Volume, weight, and location &mdash; the three real factors that determine your quote. No surprises, ever.</p>
+            <span style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--green);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;">Read the Guide &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
