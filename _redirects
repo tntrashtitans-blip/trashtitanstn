@@ -1,8 +1,32 @@
-/murfreesboro   /murfreesboro.html   200
-/nashville      /nashville.html      200
-/smyrna         /smyrna.html         200
-/lavergne       /lavergne.html       200
-/nolensville    /nolensville.html    200
-/franklin       /franklin.html       200
-/lebanon        /lebanon.html        200
-/mt-juliet      /mt-juliet.html      200
+# Redirect legacy .html URLs to the canonical clean URLs.
+/index.html                                  /                                      301
+/murfreesboro.html                           /murfreesboro                          301
+/nashville.html                              /nashville                             301
+/smyrna.html                                 /smyrna                                301
+/lavergne.html                               /lavergne                              301
+/nolensville.html                            /nolensville                           301
+/franklin.html                               /franklin                              301
+/lebanon.html                                /lebanon                               301
+/mt-juliet.html                              /mt-juliet                             301
+/teen-entrepreneur.html                      /teen-entrepreneur                     301
+/middle-point-landfill.html                  /middle-point-landfill                 301
+/junk-removal-cost-murfreesboro.html         /junk-removal-cost-murfreesboro        301
+/storm-debris-cleanup-middle-tennessee.html  /storm-debris-cleanup-middle-tennessee 301
+/thanks.html                                 /thanks                                301
+/thank-you.html                              /thank-you                             301
+
+# Serve the static HTML files from extensionless URLs.
+/murfreesboro                           /murfreesboro.html                          200
+/nashville                              /nashville.html                             200
+/smyrna                                 /smyrna.html                                200
+/lavergne                               /lavergne.html                              200
+/nolensville                            /nolensville.html                           200
+/franklin                               /franklin.html                              200
+/lebanon                                /lebanon.html                               200
+/mt-juliet                              /mt-juliet.html                             200
+/teen-entrepreneur                      /teen-entrepreneur.html                     200
+/middle-point-landfill                  /middle-point-landfill.html                 200
+/junk-removal-cost-murfreesboro         /junk-removal-cost-murfreesboro.html        200
+/storm-debris-cleanup-middle-tennessee  /storm-debris-cleanup-middle-tennessee.html 200
+/thanks                                 /thanks.html                                200
+/thank-you                              /thank-you.html                             200
