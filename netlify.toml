@@ -1,2 +1,6 @@
+[build]
+  command = "node scripts/patch-google-reviews.js"
+  publish = "."
+
 [functions]
   directory = "netlify/functions"

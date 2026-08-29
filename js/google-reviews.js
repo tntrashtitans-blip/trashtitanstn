@@ -61,12 +61,42 @@
     });
   }
 
-  $('[data-google-reviews-link]').forEach(function (a) {
+  function pointToReviews(a) {
+    if (!a) return;
     a.setAttribute('href', REVIEWS_URL);
     a.setAttribute('target', '_blank');
     a.setAttribute('rel', 'noopener');
-  });
+  }
 
+  $('[data-google-reviews-link]').forEach(pointToReviews);
+  $('a[href*="google.com/maps/place/Trash"]').forEach(pointToReviews);
+
+  function stripStaleJsonLd() {
+    $('script[type="application/ld+json"]').forEach(function (script) {
+      var data;
+      try {
+        data = JSON.parse(script.textContent);
+      } catch (e) {
+        return;
+      }
+      var nodes = Array.isArray(data) ? data : [data];
+      var changed = false;
+      nodes.forEach(function (node) {
+        if (!node || !node.aggregateRating) return;
+        var n = Number(node.aggregateRating.reviewCount);
+        var r = Number(node.aggregateRating.ratingValue);
+        if (n === 7 && r === 5) {
+          delete node.aggregateRating;
+          changed = true;
+        }
+      });
+      if (changed) {
+        script.textContent = JSON.stringify(Array.isArray(data) ? nodes : nodes[0]);
+      }
+    });
+  }
+
+  stripStaleJsonLd();
   hideNumericPlaceholders();
 
   fetch('/.netlify/functions/google-place', { credentials: 'same-origin' })
