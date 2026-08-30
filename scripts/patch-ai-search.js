@@ -9,6 +9,9 @@ const path = require('path');
 
 const GBP =
   'https://www.google.com/maps/place/Trash+Titans/@35.9277969,-86.2991721,17z/data=!4m6!3m5!1s0x65543b4ffe424819:0xf04d58c0cd2ab83d!16s%2Fg%2F11z304_ydp';
+const INSTAGRAM = 'https://www.instagram.com/trash_titans_junk_removal/';
+const FACEBOOK = 'https://www.facebook.com/trash.titans.34016';
+const SAME_AS = [GBP, INSTAGRAM, FACEBOOK];
 const BIZ_ID = 'https://tntrashtitans.com/#localbusiness';
 const PERSON_ID = 'https://tntrashtitans.com/teen-entrepreneur#person';
 
@@ -56,7 +59,7 @@ const HOME_LD = {
     return { '@type': 'City', name: name };
   }),
   founder: FOUNDER,
-  sameAs: [GBP],
+  sameAs: SAME_AS,
   knowsAbout: [
     'junk removal',
     'garage cleanout',
@@ -151,7 +154,7 @@ function patchLocalBusiness(data) {
   if (data['@type'] !== 'LocalBusiness') return data;
   data['@id'] = BIZ_ID;
   data.name = 'Trash Titans';
-  data.sameAs = [GBP];
+  data.sameAs = SAME_AS;
   data.founder = FOUNDER;
   if (!data.logo) data.logo = 'https://tntrashtitans.com/trash-titans-logo.webp';
   if (!data.image) data.image = 'https://tntrashtitans.com/trash-titans-truck-murfreesboro-tn.webp';
@@ -166,10 +169,9 @@ function patchProvider(data) {
   if (!data.provider || typeof data.provider !== 'object') return data;
   data.provider['@id'] = BIZ_ID;
   data.provider.name = 'Trash Titans';
-  data.provider.sameAs = [GBP];
+  data.provider.sameAs = SAME_AS;
   return data;
 }
-
 
 function patchClassYear(html) {
   html = html.replace(/is a junior at Oakland High School/g, 'is a senior at Oakland High School');
@@ -183,11 +185,24 @@ function patchClassYear(html) {
   return html;
 }
 
+function patchFooter(html) {
+  if (html.indexOf('instagram.com/trash_titans_junk_removal') !== -1) return html;
+  var i = html.lastIndexOf('</footer>');
+  if (i === -1) return html;
+  var block =
+    '<p class="footer-social" style="margin:0.75rem 0;font-size:0.85rem;">' +
+    '<a href="' + INSTAGRAM + '" target="_blank" rel="noopener noreferrer" style="color:#3a9e3a;margin-right:1rem;">Instagram</a>' +
+    '<a href="' + FACEBOOK + '" target="_blank" rel="noopener noreferrer" style="color:#3a9e3a;">Facebook</a>' +
+    '</p>\n';
+  return html.slice(0, i) + block + html.slice(i);
+}
+
 function patchFile(file) {
   var html = fs.readFileSync(file, 'utf8');
   var orig = html;
   var name = path.basename(file);
   html = patchClassYear(html);
+  html = patchFooter(html);
 
   html = html.replace(
     /<script type="application\/ld\+json">\s*\{[^{}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>/g,
