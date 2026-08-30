@@ -1,5 +1,16 @@
 [
   {
+    "slug": "trailer-maintenance",
+    "category": "From the Yard · August 2026",
+    "labelColor": "#c8a84b",
+    "title": "If the Trailer Isn't Working, Neither Am I",
+    "excerpt": "Last week the dump trailer seized up in the driveway. A neighbor found a loose wire. Here's why the truck and trailer have to stay maintained or the jobs don't happen.",
+    "image": "/lawson-trailer-hitch.webp",
+    "imageAlt": "Lawson Gregory checking the dump trailer hitch in the driveway",
+    "imagePosition": "center top",
+    "cta": "Read the Story"
+  },
+  {
     "slug": "storm-debris-cleanup-middle-tennessee",
     "category": "Storm Season · April 2026",
     "labelColor": "#1a5276",
