@@ -195,7 +195,7 @@ function patchFile(file) {
       }
       return data;
     });
-    if (html.indexOf(PERSON_ID) === -1 || html.indexOf('"@type":"Person"') === -1) {
+    if (html.indexOf('"alumniOf"') === -1) {
       html = html.replace('</head>', scriptTag(PERSON_LD) + '\n</head>');
     }
   } else {
