@@ -170,10 +170,24 @@ function patchProvider(data) {
   return data;
 }
 
+
+function patchClassYear(html) {
+  html = html.replace(/is a junior at Oakland High School/g, 'is a senior at Oakland High School');
+  html = html.replace(/a junior at Oakland High School/g, 'a senior at Oakland High School');
+  if (html.indexOf('starting as a junior at sixteen years old') === -1) {
+    html = html.replace(/starting at sixteen years old/g, 'starting as a junior at sixteen years old');
+  }
+  if (html.indexOf('I started Trash Titans as a junior in March 2025') === -1) {
+    html = html.replace(/I started Trash Titans in March 2025/g, 'I started Trash Titans as a junior in March 2025');
+  }
+  return html;
+}
+
 function patchFile(file) {
   var html = fs.readFileSync(file, 'utf8');
   var orig = html;
   var name = path.basename(file);
+  html = patchClassYear(html);
 
   html = html.replace(
     /<script type="application\/ld\+json">\s*\{[^{}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>/g,
