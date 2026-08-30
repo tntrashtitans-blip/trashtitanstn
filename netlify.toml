@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/patch-google-reviews.js && node scripts/patch-ai-search.js"
+  command = "node scripts/decode-assets.js && node scripts/patch-google-reviews.js && node scripts/patch-ai-search.js"
   publish = "."
 
 [functions]
