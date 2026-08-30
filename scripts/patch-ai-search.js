@@ -213,12 +213,117 @@ function patchFooter(html) {
   return html.slice(0, i) + block + html.slice(i);
 }
 
+
+var BLOG_CARD_FILES = {
+  'index.html': true,
+  'murfreesboro.html': true,
+  'nashville.html': true,
+  'smyrna.html': true,
+  'lavergne.html': true,
+  'nolensville.html': true,
+  'franklin.html': true,
+  'lebanon.html': true,
+  'mt-juliet.html': true,
+};
+
+function escapeHtml(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function loadBlogs() {
+  try {
+    var raw = fs.readFileSync(path.join(process.cwd(), 'blogs.json'), 'utf8');
+    var data = JSON.parse(raw);
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function resolveLabelColor(c) {
+  if (!c) return '#c8a84b';
+  if (String(c).indexOf('var(') !== -1) return '#3a9e3a';
+  return c;
+}
+
+function buildBlogCard(post) {
+  var href = '/' + String(post.slug || '').replace(/^\/+/, '');
+  var img = post.image || '/before-junk-removal-middle-tennessee.webp';
+  var alt = escapeHtml(post.imageAlt || post.title || '');
+  var pos = escapeHtml(post.imagePosition || 'center');
+  var color = resolveLabelColor(post.labelColor);
+  var title = escapeHtml(post.title || '');
+  var cat = escapeHtml(post.category || '');
+  var cta = escapeHtml(post.cta || 'Read more');
+  return (
+    '<a href="' + escapeHtml(href) + '" style="text-decoration:none;color:inherit;">' +
+      '<div style="background:#1a1a1a;border-radius:10px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform=\'translateY(-4px)\';this.style.boxShadow=\'0 12px 40px rgba(0,0,0,0.5)\'" onmouseout="this.style.transform=\'none\';this.style.boxShadow=\'none\'">' +
+        '<img src="' + escapeHtml(img) + '" alt="' + alt + '" style="width:100%;height:180px;object-fit:cover;object-position:' + pos + ';display:block;">' +
+        '<div style="padding:1.2rem;">' +
+          '<div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:' + escapeHtml(color) + ';margin-bottom:0.4rem;">' + cat + '</div>' +
+          '<h3 style="font-family:\'Bebas Neue\',sans-serif;font-size:1.4rem;color:#fff;line-height:1.1;margin-bottom:0.5rem;">' + title + '</h3>' +
+          '<span style="color:#c8a84b;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">' + cta + ' &rarr;</span>' +
+        '</div>' +
+      '</div>' +
+    '</a>'
+  );
+}
+
+function buildBlogCardsSection(posts, opts) {
+  opts = opts || {};
+  var list = posts.slice(0, opts.limit || 4);
+  var cards = list.map(buildBlogCard).join('\n');
+  var idAttr = opts.id ? ' id="' + opts.id + '"' : '';
+  return (
+    '<section' + idAttr + ' class="blog-cards-smyrna" style="background:#111;padding:4rem 1rem;">\n' +
+    '  <div style="max-width:1100px;margin:0 auto;">\n' +
+    '    <div style="text-align:center;margin-bottom:2.5rem;">\n' +
+    '      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#c8a84b;margin-bottom:0.5rem;">From The Blog</div>\n' +
+    '      <h2 style="font-family:\'Bebas Neue\',sans-serif;font-size:2.8rem;color:#fff;letter-spacing:0.05em;">Stories &amp; Tips</h2>\n' +
+    '      <p style="color:#aaa;font-size:0.95rem;max-width:500px;margin:0.5rem auto 0;">Real stories from the road and local insights from Middle Tennessee\'s hardest-working junk removal crew.</p>\n' +
+    '    </div>\n' +
+    '    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">\n' +
+    cards + '\n' +
+    '    </div>\n' +
+    '    <div style="text-align:center;margin-top:2.5rem;">\n' +
+    '      <a href="/blog" style="color:#c8a84b;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;font-size:0.9rem;text-decoration:none;">See all stories &rarr;</a>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '</section>'
+  );
+}
+
+function patchBlogCards(html, name) {
+  if (name === 'blog.html' || name === 'trailer-maintenance.html') return html;
+  if (!BLOG_CARD_FILES[name]) return html;
+  var posts = loadBlogs();
+  if (!posts.length) return html;
+  var section = buildBlogCardsSection(posts, {
+    limit: 4,
+    id: name === 'index.html' ? 'blog' : undefined,
+  });
+  var smyrnaRe = /<section\b[^>]*\bclass="[^"]*\bblog-cards-smyrna\b[^"]*"[^>]*>[\s\S]*?<\/section>/i;
+  if (smyrnaRe.test(html)) return html.replace(smyrnaRe, section);
+  if (name === 'index.html') {
+    var homeRe = /<section\b[^>]*\bid=["']blog["'][^>]*>[\s\S]*?<\/section>/i;
+    if (homeRe.test(html)) return html.replace(homeRe, section);
+  }
+  var cityRe = /<section\b[^>]*>[\s\S]*?From The Blog[\s\S]*?<\/section>/i;
+  if (cityRe.test(html)) return html.replace(cityRe, section);
+  return html;
+}
+
 function patchFile(file) {
   var html = fs.readFileSync(file, 'utf8');
   var orig = html;
   var name = path.basename(file);
   html = patchClassYear(html);
   html = patchFooter(html);
+  html = patchBlogCards(html, name);
 
   html = html.replace(
     /<script type="application\/ld\+json">\s*\{[^{}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>/g,
@@ -260,11 +365,19 @@ function patchFile(file) {
   return false;
 }
 
-var root = process.cwd();
-fs.readdirSync(root)
-  .filter(function (n) {
-    return n.endsWith('.html');
-  })
-  .forEach(function (name) {
-    if (patchFile(path.join(root, name))) console.log('ai-patched', name);
-  });
+if (require.main === module) {
+  var root = process.cwd();
+  fs.readdirSync(root)
+    .filter(function (n) {
+      return n.endsWith('.html');
+    })
+    .forEach(function (name) {
+      if (patchFile(path.join(root, name))) console.log('ai-patched', name);
+    });
+}
+
+module.exports = {
+  patchBlogCards: patchBlogCards,
+  buildBlogCardsSection: buildBlogCardsSection,
+  loadBlogs: loadBlogs,
+};
