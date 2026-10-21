@@ -154,6 +154,7 @@ function patchLocalBusiness(data) {
   if (data['@type'] !== 'LocalBusiness') return data;
   data['@id'] = BIZ_ID;
   data.name = 'Trash Titans';
+  data.url = 'https://tntrashtitans.com';
   data.sameAs = SAME_AS;
   data.founder = FOUNDER;
   if (!data.logo) data.logo = 'https://tntrashtitans.com/trash-titans-logo.webp';
@@ -312,8 +313,28 @@ function patchBlogCards(html, name) {
     var homeRe = /<section\b[^>]*\bid=["']blog["'][^>]*>[\s\S]*?<\/section>/i;
     if (homeRe.test(html)) return html.replace(homeRe, section);
   }
-  var cityRe = /<section\b[^>]*>[\s\S]*?From The Blog[\s\S]*?<\/section>/i;
+  // Match only the single <section> that contains "From The Blog". The old
+  // pattern started at the FIRST <section> on the page and swallowed the hero,
+  // services, local copy and quote form on every city page (Aug 29 regression).
+  var cityRe = /<section\b[^>]*>(?:(?!<section\b)[\s\S])*?From The Blog[\s\S]*?<\/section>/i;
   if (cityRe.test(html)) return html.replace(cityRe, section);
+  return html;
+}
+
+var YEAR_SCRIPT =
+  '<script>document.querySelectorAll(".js-year").forEach(function(e){e.textContent=new Date().getFullYear();});</script>';
+
+function patchYear(html) {
+  var y = String(new Date().getFullYear());
+  var changed = false;
+  html = html.replace(/(&copy;|\u00a9)\s*(?:<span class="js-year">)?20\d\d(?:<\/span>)?/g, function (m, sym) {
+    changed = true;
+    return sym + ' <span class="js-year">' + y + '</span>';
+  });
+  if (changed && html.indexOf('class="js-year"') !== -1 && html.indexOf(YEAR_SCRIPT) === -1) {
+    var i = html.lastIndexOf('</body>');
+    if (i !== -1) html = html.slice(0, i) + YEAR_SCRIPT + '\n' + html.slice(i);
+  }
   return html;
 }
 
@@ -324,6 +345,7 @@ function patchFile(file) {
   html = patchClassYear(html);
   html = patchFooter(html);
   html = patchBlogCards(html, name);
+  html = patchYear(html);
 
   html = html.replace(
     /<script type="application\/ld\+json">\s*\{[^{}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>/g,
