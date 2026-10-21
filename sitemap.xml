@@ -66,7 +66,14 @@
 
   <url>
     <loc>https://tntrashtitans.com/blog</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tntrashtitans.com/ruthie-2026-junk-removal-murfreesboro</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
