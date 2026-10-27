@@ -4,3 +4,8 @@
 
 [functions]
   directory = "netlify/functions"
+
+# Submit sitemap URLs to IndexNow after a production deploy is live.
+# Deploy previews and branch deploys do not run this plugin.
+[[context.production.plugins]]
+package = "/netlify/plugins/indexnow"
