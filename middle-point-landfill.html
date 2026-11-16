@@ -242,12 +242,20 @@
 
     @media (max-width: 640px) {
       nav { padding: 0 20px; }
-      .nav-links a:not(.nav-cta) { display: none; }
       .sticky-cta { display: flex; }
       body { padding-bottom: 70px; }
       .hero { min-height: auto; padding: 60px 20px 56px; }
     }
-  </style>
+  
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    .hamburger span { display:block; width:24px; height:2px; background:#fff; }
+    @media (max-width: 1000px) {
+      .hamburger { display:flex; }
+      .nav-links { display:none; position:absolute; top:64px; left:0; right:0; background:#0f0f0f; flex-direction:column; align-items:flex-start; padding:1.25rem 1.5rem; gap:1rem; border-bottom:2px solid #1e1e1e; z-index:120; }
+      .nav-links.open { display:flex; }
+    }
+
+</style>
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Middle Point Landfill Is Under Fire. Your Junk Removal Isn't.","description":"Rutherford County's controversial landfill just racked up more state violations. Here's the full story — and why Trash Titans keeps hauling without missing a beat.","image":"https://tntrashtitans.com/before-junk-removal-middle-tennessee.webp","author":{"@type":"Person","name":"Lawson Gregory"},"publisher":{"@type":"Organization","@id":"https://tntrashtitans.com/#localbusiness","name":"Trash Titans","url":"https://tntrashtitans.com","logo":{"@type":"ImageObject","url":"https://tntrashtitans.com/trash-titans-logo.webp"}},"datePublished":"2026-04-19","dateModified":"2026-04-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://tntrashtitans.com/middle-point-landfill"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tntrashtitans.com/"},{"@type":"ListItem","position":2,"name":"Middle Point Landfill Is Under Fire. Your Junk Removal Isn't.","item":"https://tntrashtitans.com/middle-point-landfill"}]}</script>
@@ -258,9 +266,13 @@
     <a class="nav-logo" href="/">
       <img src="481710451_122106200402786504_7873103321535161403_n.jpg" alt="Trash Titans Junk Removal" style="height:42px;display:block;">
     </a>
-    <div class="nav-links">
+    <button class="hamburger" type="button" onclick="document.getElementById('navMenu').classList.toggle('open')" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navMenu">
       <a href="/#services">Services</a>
       <a href="/#areas">Service Areas</a>
+      <a href="/murfreesboro">Murfreesboro</a>
+      <a href="/smyrna">Smyrna</a>
+      <a href="/lavergne">LaVergne</a>
       <a href="/#contact" class="nav-cta">Free Quote</a>
     </div>
   </nav>
@@ -397,5 +409,6 @@
     <p style="margin-top:8px;"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/murfreesboro">Murfreesboro</a> &nbsp;·&nbsp; <a href="/nashville">Nashville</a> &nbsp;·&nbsp; <a href="/smyrna">Smyrna</a> &nbsp;·&nbsp; <a href="/franklin">Franklin</a></p>
   </footer>
 
+<script>document.querySelectorAll('#navMenu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navMenu').classList.remove('open');});});</script>
 </body>
 </html>

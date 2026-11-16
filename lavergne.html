@@ -56,6 +56,17 @@
     @media(max-width:900px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
     @media(max-width:560px){.service-grid{grid-template-columns:1fr!important;}}
   </style>
+<style>
+@media (max-width: 1360px) {
+  .nav-links { gap: 0.7rem; }
+  .nav-links a { letter-spacing: 0.04em; }
+}
+@media (max-width: 1160px) {
+  .hamburger { display: flex; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #0d0d0d; border-bottom: 1px solid #222; flex-direction: column; padding: 1rem 1.5rem; gap: 1rem; z-index: 120; }
+  .nav-links.open { display: flex; }
+}
+</style>
 </head>
 <body>
 
@@ -74,6 +85,9 @@
     <li><a href="https://tntrashtitans.com/#reviews">Reviews</a></li>
     <li><a href="https://tntrashtitans.com/#about">Our Story</a></li>
     <li><a href="https://tntrashtitans.com/#areas">Service Areas</a></li>
+    <li><a href="/murfreesboro">Murfreesboro</a></li>
+    <li><a href="/smyrna">Smyrna</a></li>
+    <li><a href="/lavergne">LaVergne</a></li>
     <li><a href="#quote" class="nav-cta">Free Quote</a></li>
   </ul>
 </nav>
@@ -265,6 +279,7 @@
       <a href="https://tntrashtitans.com/#services" style="color:#aaa;text-decoration:none;font-size:0.8rem;">Services</a>
       <a href="https://tntrashtitans.com/#portfolio" style="color:#aaa;text-decoration:none;font-size:0.8rem;">Our Work</a>
       <a href="https://tntrashtitans.com/#about" style="color:#aaa;text-decoration:none;font-size:0.8rem;">Our Story</a>
+      <a href="/murfreesboro" style="color:#aaa;text-decoration:none;font-size:0.8rem;">Murfreesboro</a>
       <a href="#quote" style="color:#c8a84b;text-decoration:none;font-size:0.8rem;font-weight:700;">Get a Quote</a>
     </div>
   </div>

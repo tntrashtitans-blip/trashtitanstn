@@ -126,6 +126,17 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
   body { padding-bottom:68px; }
 }
 </style>
+<style>
+@media (max-width: 1400px) {
+  nav ul { gap: 0.95rem; }
+  nav ul a { letter-spacing: 0.05em; }
+}
+@media (max-width: 1160px) {
+  nav ul { display: none; }
+  .hamburger { display: flex; }
+  nav ul.open { display: flex; flex-direction: column; position: fixed; top: 66px; left: 0; right: 0; background: #0d0d0d; padding: 2rem; gap: 1.5rem; border-bottom: 3px solid #2a6e2a; z-index: 199; }
+}
+</style>
 </head>
 <body>
 
@@ -138,6 +149,9 @@ footer { background:#060606; padding:3rem 2rem 1.5rem; text-align:center; }
     <li><a href="https://tntrashtitans.com/#reviews">Reviews</a></li>
     <li><a href="https://tntrashtitans.com/#about">Our Story</a></li>
     <li><a href="https://tntrashtitans.com/#areas">Service Areas</a></li>
+    <li><a href="/murfreesboro">Murfreesboro</a></li>
+    <li><a href="/smyrna">Smyrna</a></li>
+    <li><a href="/lavergne">LaVergne</a></li>
     <li><a href="https://tntrashtitans.com/#contact" class="nav-cta">Free Quote</a></li>
   </ul>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
