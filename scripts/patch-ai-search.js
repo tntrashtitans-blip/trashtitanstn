@@ -116,6 +116,7 @@ const HOME_LD = {
       return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: name } };
     }),
   },
+  award: "2026 Ruthies Community's Choice Award – Junk Removal Services (Daily News Journal)",
   review: REVIEWS,
   aggregateRating: {
     '@type': 'AggregateRating',
