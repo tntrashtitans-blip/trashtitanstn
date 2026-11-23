@@ -47,6 +47,7 @@
         if (!node || typeof node !== 'object') return;
         var type = node['@type'];
         if (type !== 'HomeAndConstructionBusiness' && type !== 'LocalBusiness') return;
+        if (Array.isArray(node.review) && node.review.length) return;
         node.aggregateRating = {
           '@type': 'AggregateRating',
           ratingValue: String(rating),

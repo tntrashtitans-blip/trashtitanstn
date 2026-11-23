@@ -62,14 +62,17 @@ footer{background:#060606;padding:3rem 2rem 1.5rem;text-align:center;}.footer-lo
   nav ul.open { display: flex; flex-direction: column; position: fixed; top: 66px; left: 0; right: 0; background: #0d0d0d; padding: 2rem; gap: 1.5rem; border-bottom: 3px solid #2a6e2a; z-index: 199; }
 }
 </style>
+<style>.skip-link{position:fixed;left:1rem;top:0.55rem;transform:translateY(-160%);background:#f0c040;color:#0d0d0d;padding:0.65rem 1rem;z-index:10001;font-weight:800;border-radius:4px;text-decoration:none;}.skip-link:focus{transform:translateY(0);outline:3px solid #0d0d0d;}.form-consent{font-size:0.75rem;color:#555;line-height:1.5;margin-top:0.75rem;}</style>
+<script src="/js/ga4.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <nav>
   <a href="/" class="nav-logo-text">TRASH <span>TITANS</span></a>
   <ul id="navMenu">
+    <li><a href="/#services">Junk Removal</a></li>
     <li><a href="/#portfolio">Our Work</a></li>
-    <li><a href="/#services">Services</a></li>
     <li><a href="/#reviews">Reviews</a></li>
     <li><a href="/#about">Our Story</a></li>
     <li><a href="/#areas">Service Areas</a></li>
@@ -80,6 +83,7 @@ footer{background:#060606;padding:3rem 2rem 1.5rem;text-align:center;}.footer-lo
   </ul>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
+<main id="main">
 
 <div class="blog-hero">
   <div class="blog-hero-pattern"></div>
@@ -179,19 +183,20 @@ footer{background:#060606;padding:3rem 2rem 1.5rem;text-align:center;}.footer-lo
   </div>
 </div>
 
+</main>
 <footer>
   <div class="footer-logo">TRASH<span>TITANS</span> JUNK REMOVAL</div>
   <div class="footer-tagline">Middle Tennessee's Hardest-Working Junk Removal Service</div>
   <div class="footer-links">
-    <a href="/#services">Services</a>
+    <a href="/#services">Junk Removal</a>
     <a href="/#portfolio">Our Work</a>
     <a href="/#about">Our Story</a>
     <a href="/#areas">Service Areas</a>
     <a href="/blog">Blog</a>
     <a href="/#contact">Get a Quote</a>
     <a href="tel:6159879876">615-987-9876</a>
-  </div>
-  <div class="footer-areas">Proudly serving: <a href="/murfreesboro" style="color:inherit;text-decoration:none;">Murfreesboro</a> · Nashville · Smyrna · LaVergne · Nolensville · Franklin · Lebanon · Mt. Juliet</div>
+  <a class="footer-legal" href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/accessibility">Accessibility</a></div>
+  <div class="footer-areas">Proudly serving: <a href="/murfreesboro" style="color:inherit;text-decoration:none;">Murfreesboro</a> · <a href="/lascassas" style="color:inherit;text-decoration:none;">Lascassas</a> · Nashville · Smyrna · LaVergne · Nolensville · Franklin · Lebanon · Mt. Juliet</div>
   <div class="footer-bottom">© 2026 Trash Titans Junk Removal · Murfreesboro, TN · TNTrashTitans@gmail.com</div>
 </footer>
 
