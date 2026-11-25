@@ -17,6 +17,7 @@ const PERSON_ID = 'https://tntrashtitans.com/teen-entrepreneur#person';
 
 const CITIES = [
   'Murfreesboro',
+  'Lascassas',
   'Nashville',
   'Smyrna',
   'LaVergne',
@@ -24,6 +25,30 @@ const CITIES = [
   'Franklin',
   'Lebanon',
   'Mt. Juliet',
+];
+
+const REVIEWS = [
+  {
+    '@type': 'Review',
+    author: { '@type': 'Person', name: 'Erica Dillard' },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    reviewBody:
+      'Trash Titans came out the same day and were super professional. They made everything quick and easy, showed up when they said they would, and got it done without any hassle. Definitely recommend!',
+  },
+  {
+    '@type': 'Review',
+    author: { '@type': 'Person', name: 'Eric Talbot' },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    reviewBody:
+      'I have used Trash Titans several times, and every time it\'s been a great experience. Always fair price, great communication, my go to service.',
+  },
+  {
+    '@type': 'Review',
+    author: { '@type': 'Person', name: 'K. Springer' },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    reviewBody:
+      'Trash Titans is an excellent & reliable company. My family has used them multiple times. The prices are unbeatable & the owner is great to work with!',
+  },
 ];
 
 const FOUNDER = {
@@ -36,13 +61,13 @@ const FOUNDER = {
 
 const HOME_LD = {
   '@context': 'https://schema.org',
-  '@type': ['HomeAndConstructionBusiness', 'LocalBusiness'],
+  '@type': 'LocalBusiness',
   '@id': BIZ_ID,
   name: 'Trash Titans',
   alternateName: 'Trash Titans Junk Removal',
   legalName: 'Trash Titans',
   description:
-    'Junk removal in Murfreesboro, Nashville, and Middle Tennessee. Owner-operated by Lawson Gregory. Call or text 615-987-9876.',
+    'Junk removal in Murfreesboro, Lascassas, Nashville, and Middle Tennessee. Household junk, furniture, appliances, garage cleanouts, estate cleanouts, and commercial cleanouts. Call or text 615-987-9876.',
   url: 'https://tntrashtitans.com',
   telephone: '+16159879876',
   email: 'TNTrashTitans@gmail.com',
@@ -62,30 +87,42 @@ const HOME_LD = {
   sameAs: SAME_AS,
   knowsAbout: [
     'junk removal',
-    'garage cleanout',
+    'household junk removal',
     'furniture removal',
     'appliance removal',
-    'storm debris cleanup',
+    'garage cleanout',
     'estate cleanout',
     'commercial cleanout',
+    'curbside junk pickup',
+    'construction debris removal',
+    'storm debris cleanup',
+    'yard debris removal',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Junk removal services',
     itemListElement: [
-      'Junk removal',
-      'Garage cleanout',
+      'Household junk removal',
       'Furniture removal',
       'Appliance removal',
-      'Renovation and construction debris removal',
-      'Storm debris cleanup',
-      'Commercial cleanout',
+      'Garage cleanout',
       'Estate cleanout',
+      'Commercial cleanout',
       'Curbside junk pickup',
+      'Construction debris removal',
+      'Storm debris cleanup',
       'Yard debris removal',
     ].map(function (name) {
       return { '@type': 'Offer', itemOffered: { '@type': 'Service', name: name } };
     }),
+  },
+  award: "2026 Ruthies Community's Choice Award – Junk Removal Services (Daily News Journal)",
+  review: REVIEWS,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    bestRating: '5',
+    reviewCount: '3',
   },
 };
 
@@ -137,9 +174,10 @@ function patchHome(html) {
   var replaced = false;
   html = eachLd(html, function (data) {
     var type = data['@type'];
+    var types = Array.isArray(type) ? type : [type];
     var isHome =
-      type === 'HomeAndConstructionBusiness' ||
-      (Array.isArray(type) && type.indexOf('HomeAndConstructionBusiness') !== -1);
+      types.indexOf('HomeAndConstructionBusiness') !== -1 ||
+      types.indexOf('LocalBusiness') !== -1;
     if (!isHome) return data;
     replaced = true;
     return HOME_LD;
@@ -225,6 +263,7 @@ var BLOG_CARD_FILES = {
   'franklin.html': true,
   'lebanon.html': true,
   'mt-juliet.html': true,
+  'lascassas.html': true,
 };
 
 function escapeHtml(str) {
@@ -347,10 +386,13 @@ function patchFile(file) {
   html = patchBlogCards(html, name);
   html = patchYear(html);
 
-  html = html.replace(
-    /<script type="application\/ld\+json">\s*\{[^{}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>/g,
-    ''
-  );
+  // Homepage FAQPage is maintained by hand and must survive the build.
+  if (name !== 'index.html') {
+    html = html.replace(
+      /<script type="application\/ld\+json">\s*\{[^{}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>/g,
+      ''
+    );
+  }
 
   if (name === 'index.html') {
     html = patchHome(html);
@@ -402,4 +444,5 @@ module.exports = {
   patchBlogCards: patchBlogCards,
   buildBlogCardsSection: buildBlogCardsSection,
   loadBlogs: loadBlogs,
+  HOME_LD: HOME_LD,
 };
